@@ -1,56 +1,62 @@
-.form-control {
-
-    width: 80% !important;
-    display: inline !important;
-    border-radius: 0 !important
-}
-.btn {
-    border-radius: 0 !important;
-}
 section.App {
     margin: 50px;
     padding: 25px;
     background-color: #FFF;
 }
+section.App .btn {
+    border-radius: 0 !important;
+}
+
+section.App form.form input.form-control {
+    margin-left: 43px;
+}
+@media (max-width: 576px) {
+    section.App form.form input.form-control {
+        margin-left: 0;
+    }
+    section.App .btn {
+        margin-top: 10px
+    }
+}
+
+
+
+section.App form.form p {
+    text-align: right
+}
+
 
 section.App h2 {
     margin: 25px auto;
     background-color: #d9534f;
     padding: 10px;
-    color: #FFF;
+    color: #FFF; 
 }
-input {
-    width: 80%;
-    border: 0;
-    padding: 6px 10px;
-    outline: none;
-}
-
-li {
+.details , .botton-one , .botton-two {
     margin: 15px 0
 }
 
-li span {
-    display: inline-block;
-    width: 60%;
+.details span {
+    display: block;
     background-color: #EEE;
     text-align: left;
     padding: 6px 10px;
+
 }
-li > button:first-of-type {
+.botton-one button {
     background-color: #6a6a6a;
     color: #FFF;
-    margin: 1%;
-    width: 19%;
-    border-color: #6a6a6a;
     padding: 6px 10px;
+    border-color: #6a6a6a;
 }
-li > button:last-of-type {
+.botton-two button {
     background-color: #d9534f;
     color: #FFF;
     border-color: #d9534f;
     padding: 6px 10px;
 }
+
+
 .updated-form {
     margin: 11px 0
 }

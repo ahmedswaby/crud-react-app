@@ -6,11 +6,30 @@ class CourseList extends Component {
     }
     renderCourse = () => {
         return (
+            <div className="container">
+                <div className="row no-gutters">
+                    
+                    
+                    <div className="col-md-6">
+                    <div className="details">
+                        <span>{this.props.details.name}</span>
+                        </div>
+                    </div>
+                    <div className=" col-md-3">
+                    <div className="botton-one">
+                    <button onClick={() => {this.toggleState()}}>Edit Course</button>
+                    </div>
+                    </div>
+                    <div className="col-md-3">
+                    <div className="botton-two">
+                    <button onClick={() => {this.props.deleteCourse(this.props.index)}}>Delete Course</button>
+                    </div>
+                    </div>
 
-            <li><span>{this.props.details.name}</span>
-            <button onClick={() => {this.toggleState()}}>Edit Course</button>
-            <button onClick={() => {this.props.deleteCourse(this.props.index)}}>Delete Course</button>
-            </li>
+            
+            
+            </div>
+            </div>
 
         )
     }
@@ -34,7 +53,7 @@ class CourseList extends Component {
     renderUpdateForm = () => {
         return (
             <form onSubmit={this.updateCourseItem} className="updated-form">
-                <input type="text" ref={(v) => {this.input = v}} defaultValue={this.props.details.name} id="update"/>
+                <input type="text" className="form-control" ref={(v) => {this.input = v}} defaultValue={this.props.details.name} id="update"/>
                 <button className="btn btn-success">Update Course</button>
             </form>
         )
